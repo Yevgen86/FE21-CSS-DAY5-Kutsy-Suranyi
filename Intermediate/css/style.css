@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 100%;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-column-gap: 25px;
+          column-gap: 25px;
+  background-color: #406ef4;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 70px;
+  padding: 10px;
+  margin-left: 5%;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+header .nav-container {
+  width: 100%;
+}
+
+header .nav-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav-container ul li {
+  padding: 25px 20px;
+}
+
+header .nav-container ul li:hover {
+  background-color: #7890da;
+}
+
+header .nav-container ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .hero {
+  position: relative;
+  color: #406ef4;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100%;
+  max-height: 700px;
+}
+
+main .hero h1 {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  font-size: 6em;
+  font-weight: 300;
+  z-index: 2;
+}
+
+main .hero img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .5;
+  max-height: 600px;
+}
+
+main .hero p {
+  position: absolute;
+  bottom: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+}
+
+main .content p {
+  font-size: 4em;
+  text-align: right;
+  width: 100%;
+  background-color: #a3a2a2;
+  padding: 1em 0.5em 0.5em 0;
+  margin-top: -5px;
+}
+/*# sourceMappingURL=style.css.map */
