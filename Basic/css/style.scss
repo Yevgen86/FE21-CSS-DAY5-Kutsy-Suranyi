@@ -1,0 +1,132 @@
+@import "font";
+@import "colors";
+
+// Mixins
+@mixin borderRadius($radius) {
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color) {
+  -webkit-box-shadow: $top $left $blur $color;
+  -moz-box-shadow: $top $left $blur $color;
+  box-shadow: $top $left $blur $color;
+}
+
+// Styles starting here
+* {
+  font-family: $ffamily;
+  font-size: 1em;
+  font-weight: 400;
+  color: $fcolor;
+}
+
+body {
+  background-color: $main_bgcolor;
+}
+
+/* Styles for the navigation */
+nav ul {
+  display: flex;
+  list-style: none;
+
+  li {
+    //margin: 10px;
+    padding: 10px;
+
+    &:hover {
+      @include box-shadow(1px, 1px, 25px, $link_hover_color);
+      background-color: $link_hover_color;
+      transition: 1s;
+    }
+  }
+
+  li a {
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      transition: 1s;
+    }
+  }
+}
+
+div > img {
+  width: 100%;
+  max-width: 1920px;
+  max-height: 600px;
+}
+
+// Main content styles
+main {
+  padding: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+// Footer styles
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+  color: $fcolor;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+// Form styles
+form {
+  display: inline-block;
+}
+
+label {
+  color: $label_fcolor;
+}
+
+#name,
+#email,
+#message {
+  @include borderRadius(5px);
+  width: 100%;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $fcolor;
+    background-color: $main_fcolor;
+    transition: 1s;
+    @include box-shadow(1px, 2px, 15px, $link_hover_color);
+  }
+}
+
+.button {
+  @include borderRadius(5px);
+  width: 102%;
+  margin: 0;
+  padding: 10px;
+  background-color: $fcolor;
+  color: $main_fcolor;
+  font-weight: bold;
+  letter-spacing: 5px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $fcolor;
+    background-color: $main_fcolor;
+    transition: 1s;
+    @include box-shadow(1px, 2px, 15px, $link_hover_color);
+  }
+}
